@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TaskFlow - Task Manager</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div>
+        <h1>TaskFlow</h1>
+        <p>Manage your daily tasks efficiently</p>
+      </div>
+
+      <div class="task-stats">
+        <span id="task-count">0 tasks</span>
+      </div>
+    </header>
+
+
+    <!-- Add Task Form -->
+    <form id="task-form" class="task-form">
+
+      <input
+        type="text"
+        id="task-input"
+        class="task-input"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        required
+      >
+
+      <button type="submit" class="btn btn-add">
+        + Add Task
+      </button>
+
+    </form>
+
+
+    <!-- Search -->
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search your tasks..."
+      >
+
+    </div>
+
+
+    <!-- Filters -->
+    <div class="filters">
+
+      <button class="filter-btn active" data-filter="all">
+        All
+      </button>
+
+      <button class="filter-btn" data-filter="active">
+        Active
+      </button>
+
+      <button class="filter-btn" data-filter="completed">
+        Completed
+      </button>
+
+    </div>
+
+
+    <!-- Task List -->
+    <section class="task-list-section">
+
+      <div class="section-header">
+
+        <h2>Your Tasks</h2>
+
+        <button id="clear-completed" class="clear-btn">
+          Clear Completed
+        </button>
+
+      </div>
+
+      <ul id="task-list" class="task-list"></ul>
+
+      <div id="empty-state" class="empty-state">
+
+        <div class="empty-icon">✓</div>
+
+        <h3>No tasks found</h3>
+
+        <p>Add a task and start being productive.</p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Built with HTML, CSS & JavaScript
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
